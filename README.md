@@ -7,7 +7,7 @@ The theory behind this is called DDS Method (Digital Direct Synthesis). The deta
 To run this software on an Arduino UNO connect a potentiometer to +5V and Ground and the wiper to analog 0. The frequency appears on pin 11 where you can connect active speakers or an output filter described later.
 
 
-`````
+```C
 #include "avr/pgmspace.h"
 #define cbi(sfr, bit) (_SFR_BYTE(sfr) &= ~_BV(bit))
 #define sbi(sfr, bit) (_SFR_BYTE(sfr) |= _BV(bit))
@@ -88,4 +88,4 @@ void Setup_timer2() {
   cbi (TCCR2A, WGM21);
   cbi (TCCR2B, WGM22);
 }
-`````
+```
